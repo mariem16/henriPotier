@@ -1,11 +1,9 @@
 # henriPotier
 Test project for Devoteam
 
-Demo :
-
 Architecture :  MVVM
 
-Libs : 
+Libs Used in this project : 
 
 Android Jetpack
 DataBinding
