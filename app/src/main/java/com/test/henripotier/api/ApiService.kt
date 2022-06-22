@@ -1,4 +1,4 @@
-package com.test.henripotier.repository.builder
+package com.test.henripotier.api
 
 import com.test.henripotier.data.model.Book
 import com.test.henripotier.data.model.CommercialOffers

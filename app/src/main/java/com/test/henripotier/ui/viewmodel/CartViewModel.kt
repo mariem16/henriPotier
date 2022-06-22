@@ -3,15 +3,14 @@ package com.test.henripotier.ui.viewmodel
 import androidx.lifecycle.*
 import com.test.henripotier.data.model.Book
 import com.test.henripotier.data.model.CommercialOffers
-import com.test.henripotier.repository.api.BookRepository
-import com.test.henripotier.repository.api.CartRepository
+import com.test.henripotier.repository.BookRepository
+import com.test.henripotier.repository.CartRepository
 import com.test.henripotier.ui.view.CartActivity
 import com.test.henripotier.utils.Response
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import okhttp3.internal.notify
 import javax.inject.Inject
 
 @HiltViewModel

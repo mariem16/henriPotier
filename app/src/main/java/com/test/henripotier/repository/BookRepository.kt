@@ -1,9 +1,9 @@
-package com.test.henripotier.repository.api
+package com.test.henripotier.repository
 
 import androidx.paging.PagingSource
 import com.test.henripotier.data.dao.BookDao
 import com.test.henripotier.data.model.Book
-import com.test.henripotier.repository.builder.ApiService
+import com.test.henripotier.api.ApiService
 import com.test.henripotier.utils.Response
 
 class BookRepository(private val apiService: ApiService, private val bookDao : BookDao) {

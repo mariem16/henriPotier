@@ -9,7 +9,7 @@ import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.test.henripotier.data.model.Book
-import com.test.henripotier.repository.api.BookRepository
+import com.test.henripotier.repository.BookRepository
 import com.test.henripotier.utils.Response
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

@@ -4,9 +4,9 @@ import android.content.Context
 import androidx.room.Room
 import com.test.henripotier.data.HPDataBase
 import com.test.henripotier.data.dao.BookDao
-import com.test.henripotier.repository.api.BookRepository
-import com.test.henripotier.repository.api.CartRepository
-import com.test.henripotier.repository.builder.ApiService
+import com.test.henripotier.repository.BookRepository
+import com.test.henripotier.repository.CartRepository
+import com.test.henripotier.api.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

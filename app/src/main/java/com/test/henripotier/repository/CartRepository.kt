@@ -1,7 +1,7 @@
-package com.test.henripotier.repository.api
+package com.test.henripotier.repository
 
 import com.test.henripotier.data.model.CommercialOffers
-import com.test.henripotier.repository.builder.ApiService
+import com.test.henripotier.api.ApiService
 import com.test.henripotier.utils.Response
 
 class CartRepository(private val apiService: ApiService) {
