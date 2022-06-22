@@ -1,26 +1,26 @@
-# henriPotier
-Test project for Devoteam
+# Henri Potier
 
-Architecture :  MVVM
+- Test project for Devoteam
 
-Libs Used in this project : 
+## Architecture 
+MVVM
 
-Android Jetpack
-DataBinding
-Lifecycle
-LiveData
-ViewModel
-Paging
+
+## LIbs 
+### Android Jetpack
+DataBinding 
+Lifecycle 
+LiveData 
+ViewModel 
+Paging 
 Room
 
-Coroutines
-
-HTTP
-Retrofit2
+### HTTP
+Retrofit2 
 OkHttp
 
-DI
+### DI
 Hilt
 
-UI
+### UI
 Glide
