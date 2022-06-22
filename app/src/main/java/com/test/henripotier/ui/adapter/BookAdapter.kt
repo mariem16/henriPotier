@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.DiffUtil
 import com.test.henripotier.R
 import com.test.henripotier.data.model.Book
 import com.test.henripotier.ui.viewHolder.BookViewHolder
-import javax.inject.Inject
 
 class BookAdapter constructor(
     private val onIconClicked: ((Book) -> Unit)? = null,
