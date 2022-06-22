@@ -55,8 +55,10 @@ class CartActivity : AppCompatActivity() {
             mCartBookAdapter.submitList(books?.toMutableList())
             if (books.isNullOrEmpty()) {
                 showSnackBar("Add new books in the cart")
-                mBinding.offerTextview.visibility = View.GONE
+                mBinding.calculateOfferTextview.visibility = View.GONE
             } else {
+                //setTotalPrice
+                setTotalPrice()
                 //calculate offer
                 mViewModel.getOffers(books.map { it.isbn }) {
                     updateOffer(it)
@@ -66,21 +68,27 @@ class CartActivity : AppCompatActivity() {
         }
     }
 
+    private fun setTotalPrice() {
+        mBinding.calculatedPriceTextview.text =
+            getString(R.string.price, mViewModel.calculateTotalPrice()?.toString() ?: "")
+
+    }
+
     private fun updateOffer(offerResponse: Response<String>) {
         when (offerResponse) {
             is Response.Success -> {
                 mBinding.progressBar.visibility = View.GONE
-                mBinding.offerTextview.visibility = View.VISIBLE
-                mBinding.offerTextview.text = offerResponse.result
+                mBinding.calculateOfferTextview.visibility = View.VISIBLE
+                mBinding.calculateOfferTextview.text = getString(R.string.price, offerResponse.result)
             }
             is Response.Error -> {
                 mBinding.progressBar.visibility = View.GONE
-                mBinding.offerTextview.visibility = View.GONE
+                mBinding.calculateOfferTextview.visibility = View.GONE
                 showSnackBar(offerResponse.message)
             }
             is Response.Loading -> {
                 mBinding.progressBar.visibility = View.VISIBLE
-                mBinding.offerTextview.visibility = View.GONE
+                mBinding.calculateOfferTextview.visibility = View.GONE
             }
         }
     }

@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Henri Potier</string>
-    <string name="price">%1$d $</string>
+    <string name="price">%1$s $</string>
 </resources>

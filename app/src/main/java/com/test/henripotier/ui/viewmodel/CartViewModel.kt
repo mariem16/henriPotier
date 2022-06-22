@@ -57,13 +57,19 @@ class CartViewModel @Inject constructor(
         }
     }
 
-
-    private fun calculateOffer(commercialOffer: CommercialOffers?): Double {
+    fun calculateTotalPrice() : Int? {
         val prices = _cartBookLiveData.value?.map { it.price }
-        val totalPrice = prices?.sum()
+        return prices?.sum()
+
+    }
+
+
+    private fun calculateOffer(commercialOffer: CommercialOffers?): Int {
+
+        val totalPrice = calculateTotalPrice()
 
         totalPrice?.let {
-            val offers = mutableListOf<Double>()
+            val offers = mutableListOf<Int>()
 
             commercialOffer?.offers?.forEach { offer ->
 
@@ -75,15 +81,15 @@ class CartViewModel @Inject constructor(
                         else -> {
                             0
                         }
-                    }.toDouble()
+                    }.toInt()
                 )
             }
 
-            val bestOffer = offers.toList().maxOrNull() ?: 0.0
-            return totalPrice.toDouble() - bestOffer
+            val bestOffer = offers.toList().maxOrNull() ?: 0
+            return it - bestOffer
         }
 
-        return 0.0
+        return 0
     }
 
 
